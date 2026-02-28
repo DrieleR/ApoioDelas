@@ -7,6 +7,7 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 // pages
 import Home from './route/Home.tsx'
 import Mapa from './route/Mapa.tsx'
+import NeedHelp from './route/NeedHelp.tsx'
 
 
 const router = createBrowserRouter([
@@ -21,6 +22,14 @@ const router = createBrowserRouter([
       {
         path: "/mapa",
         element: <Mapa/>
+      },
+      {
+        path: "/testes",
+        element:  <Mapa/>
+      },
+      {
+        path:"/preciso-ajuda",
+        element: <NeedHelp/>
       }
     ]
   }

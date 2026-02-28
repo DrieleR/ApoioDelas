@@ -8,6 +8,8 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import Home from './route/Home.tsx'
 import Mapa from './route/Mapa.tsx'
 import NeedHelp from './route/NeedHelp.tsx'
+import Forum from './route/Forum.tsx'
+import Post from './route/Post.tsx'
 
 
 const router = createBrowserRouter([
@@ -30,6 +32,14 @@ const router = createBrowserRouter([
       {
         path:"/preciso-ajuda",
         element: <NeedHelp/>
+      },
+      {
+        path:"/vozes-noticias",
+        element: <Forum/>
+      },
+      {
+        path:"/vozes-noticias/:id",
+        element: <Post/>
       }
     ]
   }

@@ -1,6 +1,10 @@
-import { Link } from "react-router-dom"
+import { useNavigate } from "react-router-dom"
 
 const Hero = () => {
+  const navigate = useNavigate()
+  const handleNavigate = (path: string) => {
+    navigate(path)
+  }
   return (
     <main className='min-h-screen bg-linear-to-r  from-[#056881] to-[#A0DCC0] text-center flex justify-center flex-col items-center'>
         <div className='max-w-140 mb-5 px-6 md:px-0'>
@@ -15,9 +19,11 @@ const Hero = () => {
           <button className='bg-[#3262ff9f] text-white px-3 py-4 border-none rounded-lg text-base font-semibold cursor-pointer no-underline flex justify-center gap-2 items-center w-full transition-all duration-150 hover:bg-[#FF5B32]'>
             Quero Entender
           </button>
-          <button className='bg-[#3262ff9f] text-white px-3 py-4 border-none rounded-lg text-base font-semibold cursor-pointer no-underline flex justify-center gap-2 items-center w-full transition-colors duration-300 hover:bg-[#FF5B32]'>
-            <Link to={`/mapa`}>Ver Mapa</Link>
-          </button>
+         
+            <button onClick={() => handleNavigate(`/mapa`)} className='bg-[#3262ff9f] text-white px-3 py-4 border-none rounded-lg text-base font-semibold cursor-pointer no-underline flex justify-center gap-2 items-center w-full transition-colors duration-300 hover:bg-[#FF5B32]'>
+             Ver Mapa
+            </button>
+          
         </div>
     </main>
   )

@@ -4,7 +4,7 @@ const Mapa = () => {
     <section className='flex items-center justify-center px-6 py-16'>
       <div className='bg-[#c5e7f04b] max-w-5xl w-full rounded-2xl flex flex-col md:flex-row items-center gap-8'>
             <div className='md:w-3/5 w-full rounded-2xl overflow-hidden shadow-md'>
-                <iframe src="https://www.google.com/maps/d/embed?mid=14r7iFNNFtXVNN5wz3TTP6BVvcBwgu-I" width="100%" height="400" className='border-0 w-full' allowFullScreen loading='lazy'/>
+                <iframe src="https://www.google.com/maps/d/embed?mid=14r7iFNNFtXVNN5wz3TTP6BVvcBwgu-I" width="100%" height="337" className='border-0 w-full' allowFullScreen loading='lazy'/>
             </div>
             <div className=' p-10 flex flex-col gap-6 md:w-2/5 w-full'>
                 <div>

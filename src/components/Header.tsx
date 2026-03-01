@@ -1,10 +1,14 @@
 import { useState } from "react"
 import {X, Menu} from 'lucide-react'
-import { NavLink } from "react-router-dom"
+import { NavLink, useNavigate } from "react-router-dom"
 
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const navigate = useNavigate()
+  const handleNavigate = (path: string) => {
+    navigate(path)
+  } 
   
   return (
     <header className="bg-linear-to-r from-[#056881] to-[#a0dcc0]">
@@ -22,7 +26,7 @@ const Header = () => {
             <NavLink to={`/vozes-noticias`} className={({isActive}) => isActive ? 'text-[#FF5F37]' : 'hover:text-[#FF5F37]'}>Vozes e Noticias</NavLink>
             <NavLink to={`/ciclo-violencia`} className={({isActive}) => isActive ? 'text-[#FF5F37]' : 'hover:text-[#FF5F37]'}>Ciclo de Violencia</NavLink>
           </nav>
-          <button className="bg-[#f7a670] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#f1740e] transition-all duration-200 shadow-sm hover:shadow-md">
+          <button onClick={() => handleNavigate(`/login-user`)} className="bg-[#f7a670] text-white px-6 py-2 rounded-lg font-semibold hover:bg-[#f1740e] transition-all duration-200 shadow-sm hover:shadow-md">
             Entrar
           </button>
         </div>

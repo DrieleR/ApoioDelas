@@ -10,6 +10,7 @@ import Mapa from './route/Mapa.tsx'
 import NeedHelp from './route/NeedHelp.tsx'
 import Forum from './route/Forum.tsx'
 import Post from './route/Post.tsx'
+import LoginUser from './route/LoginUser.tsx'
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,10 @@ const router = createBrowserRouter([
       {
         path:"/vozes-noticias/:id",
         element: <Post/>
+      },
+      {
+        path: "/login-user",
+        element: <LoginUser/>
       }
     ]
   }

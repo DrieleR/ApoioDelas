@@ -5,7 +5,7 @@ import OutBtn from "../components/OutBtn"
 
 const LayoutSite = () => {
   return (
-    <div className='min-h-screen bg-[#F4F8F7] relative'>
+    <div className='min-h-screen bg-[#F4F8F7] relative font-barlow'>
       <Header/>
       <OutBtn/>
       <Outlet/>

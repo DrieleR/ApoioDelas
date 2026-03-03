@@ -12,16 +12,16 @@ const Header = () => {
   
   return (
     <header className="bg-linear-to-r from-[#056881] to-[#a0dcc0]">
-      <div className="flex justify-between items-center px-4 md:px-16 py-6">
+      <div className="flex justify-between items-center px-4 md:px-16 py-6 text-[#050d74]">
         <div className="flex items-center gap-3">
           <NavLink to={`/`}>
-            <h2>Apoio Delas</h2>
+            <h2 className="font-bungee">Apoio Delas</h2>
           </NavLink>
         </div>
 
         {/* Menu Desktop */}
         <div className="hidden md:flex items-center gap-10">
-          <nav className="flex gap-10 text-sm font-medium">
+          <nav className="flex gap-10 text-sm font-medium font-bungee">
             <NavLink to={`/preciso-ajuda`} className={({isActive}) => isActive ? 'text-[#FF5F37]' : 'hover:text-[#FF5F37]'}>Preciso de Ajuda</NavLink>
             <NavLink to={`/vozes-noticias`} className={({isActive}) => isActive ? 'text-[#FF5F37]' : 'hover:text-[#FF5F37]'}>Vozes e Noticias</NavLink>
             <NavLink to={`/ciclo-violencia`} className={({isActive}) => isActive ? 'text-[#FF5F37]' : 'hover:text-[#FF5F37]'}>Ciclo de Violencia</NavLink>

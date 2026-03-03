@@ -2,6 +2,7 @@ import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import { AuthProvider } from './context/AuthContext'
 
 // pages
 import Home from './route/Home.tsx'
@@ -13,17 +14,18 @@ import CicloViolencia from './route/CicloViolencia.tsx'
 import LoginUser from './route/LoginUser.tsx'
 import LoginAdmin from './route/LoginAdmin.tsx'
 import LayoutSite from './Layouts/LayoutSite.tsx'
-import  LayoutUser from './Layouts/LayoutUser.tsx'
+import LayoutUser from './Layouts/LayoutUser.tsx'
 import LayoutAdmin from './Layouts/LayoutAdmin.tsx'
 import UserDashboard from './route/UserDashboard.tsx'
 import Us from './route/Us.tsx'
+import AdminDashboard from './route/AdminDashboard.tsx'
 
 const router = createBrowserRouter([
   // site publico
   {
     element: <LayoutSite/>,
     children: [
-       {
+      {
         path: "/",
         element: <Home/>
       },
@@ -37,7 +39,7 @@ const router = createBrowserRouter([
       },
       {
         path: "/testes",
-        element:  <Mapa/>
+        element: <Mapa/>
       },
       {
         path:"/preciso-ajuda",
@@ -68,7 +70,8 @@ const router = createBrowserRouter([
   {
     element: <LayoutUser/>,
     children: [
-      { path: "/user-dashboard",
+      {
+        path: "/user-dashboard",
         element: <UserDashboard/>
       }
     ]
@@ -82,17 +85,17 @@ const router = createBrowserRouter([
 
   // ÁREA DO ADMIN
   {
-    element:<LayoutAdmin/>,
+    element: <LayoutAdmin/>,
     children: [
-      { path: "/admin-dashboard"
-
-      }
+      { path: "/admin-dashboard", element: <AdminDashboard/>}
     ]
   }
 ])
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    <RouterProvider router={router}/>
+    <AuthProvider>
+      <RouterProvider router={router}/>
+    </AuthProvider>
   </StrictMode>,
 )

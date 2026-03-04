@@ -83,9 +83,10 @@ const CicloViolencia = () => {
           <div className="inline-block bg-[#FF5F37]/10 px-4 py-2 rounded-full mb-4">
             <span className="text-[#FF5F37] font-semibold text-sm uppercase tracking-wide">Educação e Prevenção</span>
           </div>
-          <h1 className="text-4xl md:text-5xl font-bold text-[#09083D] mb-4">
+          <h1 className="text-4xl md:text-5xl font-bold text-[#09083D] mb-4">Ciclo Da Violência</h1>
+          <h2 className="text-4xl md:text-1xl font-bold text-[#09083D] mb-4">
             É Preciso Quebrar Esse Ciclo
-          </h1>
+          </h2>
           <p className="text-xl text-[#056881] max-w-3xl mx-auto leading-relaxed">
             E a Lei Maria da Penha está ao lado das mulheres para isso.
           </p>

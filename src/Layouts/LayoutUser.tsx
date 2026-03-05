@@ -14,7 +14,7 @@ const LayoutUser = () => {
   }
 
   return (
-    <div className='min-h-screen bg-[#F4F8F7] relative'>
+    <div className='min-h-screen bg-[#F4F8F7] relative flex flex-col'>
       <HeaderAdmin
         username={user?.name || 'Usuário'}
         role="Usuário"

@@ -1,4 +1,5 @@
-import {User, LogOut} from 'lucide-react'
+import {User, LogOut, Home} from 'lucide-react'
+import { Link } from 'react-router-dom'
 interface HeaderProps {
     username: string,
     role: string
@@ -12,19 +13,25 @@ const HeaderAdmin = ({onLogOut, username, role}: HeaderProps) => {
       <div className="border-b border-gray-200 shadow-sm">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
             <div className="flex justify-between items-center">
-                <div className='flex items-center gap-3'>
-                    <div className="w-10 h-10 rounded-full flex items-center justify-center">
-                        <User size={35} className='text-[#050b3f]'/>
-                    </div>
+                <div className='flex items-center gap-8'>
+                    <Link to='/' className='flex items-center gap-2 px-4 py-2 text-[#050b3f] hover:bg-white/20 rounded-lg transition-colors font-semibold'>
+                        <Home size={18}/> Início
+                    </Link>
 
-                    <div>
-                        <span className='block text-sm font-semibold text-[#050b3f]'>{username}</span>
-                        <span className='block text-xs text-[#07137a]'>{role}</span>
+                    <div className='flex items-center gap-3'>
+                        <div className="w-10 h-10 rounded-full flex items-center justify-center">
+                            <User size={35} className='text-[#050b3f]'/>
+                        </div>
+
+                        <div>
+                            <span className='block text-sm font-semibold text-[#050b3f]'>{username}</span>
+                            <span className='block text-xs text-[#07137a]'>{role}</span>
+                        </div>
                     </div>
                 </div>
 
                 <button onClick={onLogOut} className='flex items-center gap-2 px-4 py-2 text-red-600 hover:bg-red-50 rounded-lg transition-colors font-semibold'>
-                    <LogOut size={18}/> Sair 
+                    <LogOut size={18}/> Sair
                 </button>
             </div>
         </div>

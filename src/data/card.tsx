@@ -290,6 +290,14 @@ export const steps : Step[] = [
 
 export const grupos: GroupCard[] = [
   {
+    icon: <Users size={40} className="text-[#09083D]" />,
+    title: 'Grupos de Apoio Presenciais',
+    text: 'Encontre grupos de apoio presenciais na sua cidade para compartilhar experiências e fortalecer sua rede de suporte.',
+    links: [
+      { label: 'Acessar link', to: '/mapa', external: false },
+    ],
+  },
+  {
     icon: <MessageCircle size={40} className="text-[#09083D]" />,
     title: 'Grupos nas Redes Sociais',
     text: 'Participe de grupos nas redes sociais moderados por profissionais para troca de apoio e informações de forma segura.',

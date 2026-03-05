@@ -30,6 +30,7 @@ const Testes = () => {
   const [selectedTest, setSelectedTest] = useState<number | null>(null)
   const [currentQuestion, setCurrentQuestion] = useState(0)
   const [answers, setAnswers] = useState<Record<number, number | null>>({})
+  const [selectedOptions, setSelectedOptions] = useState<Record<number, number | null>>({})
   const [showResult, setShowResult] = useState(false)
 
   const encouragements = [
@@ -667,11 +668,13 @@ const Testes = () => {
     setSelectedTest(testId)
     setCurrentQuestion(0)
     setAnswers({})
+    setSelectedOptions({})
     setShowResult(false)
   }
 
-  const handleAnswer = (questionId: number, value: number) => {
+  const handleAnswer = (questionId: number, value: number, optionIdx: number) => {
     setAnswers(prev => ({ ...prev, [questionId]: value }))
+    setSelectedOptions(prev => ({ ...prev, [questionId]: optionIdx }))
   }
 
   const handleNext = () => {
@@ -692,6 +695,7 @@ const Testes = () => {
   const handleBack = () => {
     setSelectedTest(null)
     setAnswers({})
+    setSelectedOptions({})
     setCurrentQuestion(0)
     setShowResult(false)
   }
@@ -789,16 +793,16 @@ const Testes = () => {
               {question.options.map((option, idx) => (
                 <button
                   key={idx}
-                  onClick={() => handleAnswer(question.id, option.value)}
+                  onClick={() => handleAnswer(question.id, option.value, idx)}
                   className={`w-full p-5 rounded-2xl border-2 transition-all text-left hover:shadow-md ${
-                    answers[question.id] === option.value
+                    selectedOptions[question.id] === idx
                       ? 'border-[#056881] shadow-md'
                       : 'border-gray-200 hover:border-[#056881]/50'
                   }`}
                 >
                   <div className="flex items-center justify-between">
                     <span className="text-base font-medium text-gray-800">{option.text}</span>
-                    {answers[question.id] === option.value && (
+                    {selectedOptions[question.id] === idx && (
                       <CheckCircle size={24} className="text-[#056881] shrink-0 ml-3" />
                     )}
                   </div>

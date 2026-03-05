@@ -1,5 +1,5 @@
-import {Users, ClipboardList, Megaphone, BookOpen, Scale, Shield, ShieldCheck, HeartHandshake, Heart, Lightbulb, Target, MapPin, FileText, Phone, MessageCircle, LinkIcon} from "lucide-react"
-import {FaWhatsapp,FaDiscord, FaInstagram, FaTelegram} from 'react-icons/fa'
+import {Users, BookOpen, Scale, Shield, ShieldCheck, HeartHandshake, Heart, Lightbulb, Target, MapPin, FileText, Phone, MessageCircle, LinkIcon} from "lucide-react"
+import {FaFacebook,FaDiscord} from 'react-icons/fa'
 import { Link } from "react-router-dom"
 
  type Card = {
@@ -302,10 +302,8 @@ export const grupos: GroupCard[] = [
     title: 'Grupos nas Redes Sociais',
     text: 'Participe de grupos nas redes sociais moderados por profissionais para troca de apoio e informações de forma segura.',
     links: [
-      { label: 'WhatsApp', href: '#', icon: <FaWhatsapp />, external: true },
-      { label: 'Discord', href: '#', icon: <FaDiscord />, external: true },
-      { label: 'Instagram', href: '#', icon: <FaInstagram />, external: true },
-      { label: 'Telegram', href: '#', icon: <FaTelegram/>, external: true },
+      { label: 'Facebook', href: 'https://www.facebook.com/diganaoaviolenciacontraamulher/', icon: <FaFacebook />, external: true },
+      { label: 'Discord', href: 'https://discord.com/invite/closett', icon: <FaDiscord />, external: true },
     ],
   },
   {

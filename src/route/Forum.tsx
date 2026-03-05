@@ -49,12 +49,12 @@ const Forum = () => {
         <div className="flex items-center justify-between mb-10">
           <div>
             <span className="text-xs font-semibold tracking-widest uppercase">Comunidade</span>
-            <h2 className="text-3xl font-bold text-[#09083d] mt-1">Vozes e Noticias</h2>
+            <h2 className="text-3xl font-bold text-[#09083d] mt-1">Vozes que Inspiram</h2>
             <p className="text-gray-500 text-sm mt-1">Relatos e experiências compartilhadas pela comunidade</p>
           </div>
           <button
             onClick={handleCompartilhar}
-            className="flex items-center gap-2 bg-[#FF5F37] text-white px-5 py-3 rounded-xl font-semibold text-sm hover:bg-[#e04820] transition-all shadow-sm hover:shadow-md"
+            className="cursor-pointer flex items-center gap-2 bg-[#FF5F37] text-white px-5 py-3 rounded-xl font-semibold text-sm hover:bg-[#e04820] transition-all shadow-sm hover:shadow-md"
           >
             <Plus size={16} />
             Compartilhar Relato

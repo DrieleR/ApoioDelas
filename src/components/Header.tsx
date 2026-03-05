@@ -25,20 +25,20 @@ const Header = () => {
         <div className="hidden md:flex items-center gap-10">
           <nav className="flex gap-10 text-sm font-medium font-bungee">
             <NavLink to={`/preciso-ajuda`} className={({isActive}) => isActive ? 'text-[#FF5F37]' : 'hover:text-[#FF5F37]'}>Preciso de Ajuda</NavLink>
-            <NavLink to={`/vozes-noticias`} className={({isActive}) => isActive ? 'text-[#FF5F37]' : 'hover:text-[#FF5F37]'}>Vozes e Noticias</NavLink>
+            <NavLink to={`/vozes-noticias`} className={({isActive}) => isActive ? 'text-[#FF5F37]' : 'hover:text-[#FF5F37]'}>Vozes que Inspiram</NavLink>
             <NavLink to={`/tutorial-denuncia`} className={({isActive}) => isActive ? 'text-[#FF5F37]' : 'hover:text-[#FF5F37]'}>Como Denunciar</NavLink>
           </nav>
             <NavLink to={`/doacoes`}>
-            <button className="bg-linear-to-r from-[#FF5F37] to-[#FF7552] text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 flex items-center gap-2">
+            <button className="cursor-pointer bg-linear-to-r from-[#FF5F37] to-[#FF7552] text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 flex items-center gap-2">
             Doar
             </button>
             </NavLink>
           {isAuthenticated ? (
-            <button onClick={() => handleNavigate(`/user-dashboard`)} className="bg-linear-to-r from-[#FF5F37] to-[#FF7552] text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 flex items-center gap-2">
+            <button onClick={() => handleNavigate(`/user-dashboard`)} className="cursor-pointer bg-linear-to-r from-[#FF5F37] to-[#FF7552] text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 flex items-center gap-2">
               <User size={18}/> Meus Relatos
             </button>
           ) : (
-            <button onClick={() => handleNavigate(`/login-user`)} className="bg-linear-to-r from-[#FF5F37] to-[#FF7552] text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 flex items-center gap-2">
+            <button onClick={() => handleNavigate(`/login-user`)} className="cursor-pointer bg-linear-to-r from-[#FF5F37] to-[#FF7552] text-white px-6 py-2 rounded-lg font-semibold hover:shadow-lg transition-all duration-200 flex items-center gap-2">
               Entrar
             </button>
           )}

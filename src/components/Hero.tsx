@@ -87,14 +87,14 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-3 w-full sm:w-auto">
           <button
             onClick={() => handleNavigate('/preciso-ajuda')}
-            className="flex items-center justify-center gap-2 bg-[#FF5F37] hover:bg-[#e04820] text-white px-6 py-3.5 rounded-2xl font-semibold text-sm transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto"
+            className="cursor-pointer flex items-center justify-center gap-2 bg-[#FF5F37] hover:bg-[#e04820] text-white px-6 py-3.5 rounded-2xl font-semibold text-sm transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5 w-full sm:w-auto"
           >
             <AlertCircle size={18} />
             Preciso Denunciar - Ajuda Urgente
           </button>
           <button
             onClick={() => handleNavigate('/testes')}
-            className="flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white px-6 py-3.5 rounded-2xl font-semibold text-sm transition-all duration-200 backdrop-blur-sm hover:-translate-y-0.5 w-full sm:w-auto"
+            className="cursor-pointer flex items-center justify-center gap-2 bg-white/15 hover:bg-white/25 border border-white/30 text-white px-6 py-3.5 rounded-2xl font-semibold text-sm transition-all duration-200 backdrop-blur-sm hover:-translate-y-0.5 w-full sm:w-auto"
           >
             <Shield size={18} />
             Fazer Testes de Identificação
@@ -114,7 +114,7 @@ const Hero = () => {
             <button
               key={item.label}
               onClick={() => navigate(item.path)}
-              className="flex items-center gap-2 bg-white/10 hover:bg-[#FF5F37] border border-white/20 text-white px-4 py-2 rounded-full font-medium text-xs md:text-sm transition-all duration-200 hover:-translate-y-0.5 backdrop-blur-sm"
+              className="cursor-pointer flex items-center gap-2 bg-white/10 hover:bg-[#FF5F37] border border-white/20 text-white px-4 py-2 rounded-full font-medium text-xs md:text-sm transition-all duration-200 hover:-translate-y-0.5 backdrop-blur-sm"
             >
               {item.icon}
               {item.label}
